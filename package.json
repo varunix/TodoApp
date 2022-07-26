@@ -1,0 +1,16 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "A todo app designed to do crud operations.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}
