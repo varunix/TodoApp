@@ -65,16 +65,21 @@
     margin-top: 2px;
     width: 170px;
     margin-bottom: 10px;
+    border: 2px solid red;
 }
-
+#outer-category-div{
+    border: 2px solid blue;
+}
 #category-div{
     border-bottom: 1px solid gray;
+    border: 2px solid red;
+    width: 50%;
 }
 
 #dropdown-icon{
     width: 10px;
     position: absolute;
-    top: 227px;
-    left: 776px;
+    top: 232px;
+    left: 746px;
     color: gray;
 }
