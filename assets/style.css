@@ -1,0 +1,35 @@
+#outer-div{
+    width: 650px;
+    border: 2px solid grey;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#heading{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: grey;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+}
+
+.sub-heading{
+    color: gray;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 14px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    font-size: large;
+}
+
+#description input{
+    color: gray;
+    margin-left: 15px;
+    margin-top: 2px;
+    border: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 600px;
+    outline: none;
+    font-size: medium;
+}
