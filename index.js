@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
 const port = 8000;
-const path = require('path');
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
-app.use(express.static(__dirname+'/assets'));
+app.use(express.static('assets'));
 
 app.get('/', (req, res)=>{
     res.render('home', {

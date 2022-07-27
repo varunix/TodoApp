@@ -10,7 +10,7 @@
     color: grey;
     text-align: center;
     border-bottom: 1px solid grey;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     margin-bottom: 0px;
 }
 
@@ -23,6 +23,10 @@
     font-size: large;
 }
 
+#description{
+    border-bottom: 1px solid grey;
+}
+
 #description input{
     color: gray;
     margin-left: 15px;
@@ -32,4 +36,45 @@
     width: 600px;
     outline: none;
     font-size: medium;
+}
+
+#descriptionInputId{
+    margin-bottom: 10px;
+}
+
+#dropdown-menu{
+    list-style: none;
+    display: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: gray;
+    width: 50%;
+    margin-top: 0px;
+    padding-left: 15px;
+    border: 1px solid black;
+}
+
+#dropdown-menu p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#dropdown-heading{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+    margin-left: 15px;
+    margin-top: 2px;
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+#category-div{
+    border-bottom: 1px solid gray;
+}
+
+#dropdown-icon{
+    width: 10px;
+    position: absolute;
+    top: 227px;
+    left: 776px;
+    color: gray;
 }
