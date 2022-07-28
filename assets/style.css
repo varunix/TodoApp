@@ -17,7 +17,7 @@
 .sub-heading{
     color: gray;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-top: 14px;
+    /* margin-top: 14px; */
     margin-left: 15px;
     margin-bottom: 0px;
     font-size: large;
@@ -25,6 +25,10 @@
 
 #description{
     border-bottom: 1px solid grey;
+}
+
+#description:hover{
+    background-color: gray;
 }
 
 #description input{
@@ -50,7 +54,9 @@
     width: 50%;
     margin-top: 0px;
     padding-left: 15px;
-    border: 1px solid black;
+    margin-left: 15px;
+    background-color: rgba(227, 227, 227, 0.694);
+    box-shadow: 6px 6px 10px grey;
 }
 
 #dropdown-menu p{
@@ -63,23 +69,27 @@
     color: gray;
     margin-left: 15px;
     margin-top: 2px;
-    width: 170px;
-    margin-bottom: 10px;
-    border: 2px solid red;
+    width: 300px;
+    margin-bottom: 1px;
 }
+
 #outer-category-div{
-    border: 2px solid blue;
-}
-#category-div{
     border-bottom: 1px solid gray;
-    border: 2px solid red;
+    display: flex;
+}
+
+#category-div{
     width: 50%;
 }
 
 #dropdown-icon{
     width: 10px;
     position: absolute;
-    top: 232px;
+    top: 248px;
     left: 746px;
     color: gray;
+}
+
+#date-div{
+
 }
