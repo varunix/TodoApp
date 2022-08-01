@@ -27,13 +27,13 @@
                     <h4 class="sub-heading">CATEGORY</h4>
                     <h5 id="dropdown-heading">Choose a category</h5>
                     <p id="dropdown-icon"><i class="fa fa-solid fa-caret-down"></i></p>
-                    <ul id="dropdown-menu">
-                        <li><p class="dropdown-list" name="category" onclick="listFunction('Personal')">Personal</p></li>
-                        <li><p class="dropdown-list" name="category" onclick="listFunction('Work')">Work</p></li>
-                        <li><p class="dropdown-list" name="category" onclick="listFunction('School')">School</p></li>
-                        <li><p class="dropdown-list" name="category" onclick="listFunction('Cleaning')">Cleaning</p></li>
-                        <li><p class="dropdown-list" name="category" onclick="listFunction('Other')">Other</p></li>
-                    </ul>
+                    <select id="dropdown-menu" name="category">
+                        <option value="Personal"><p class="dropdown-list" onclick="listFunction('Personal')">Personal</p></option>
+                        <option value="Work"><p class="dropdown-list" onclick="listFunction('Work')">Work</p></option>
+                        <option value="School"><p class="dropdown-list"  onclick="listFunction('School')">School</p></option>
+                        <option value="Cleaning"><p class="dropdown-list"  onclick="listFunction('Cleaning')">Cleaning</p></option>
+                        <option value="Other"><p class="dropdown-list" onclick="listFunction('Other')">Other</p></option>
+                    </select>
                 </div>
                 <div id="date-div">
                     <h4 class="sub-heading">DUE DATE</h4>
@@ -43,7 +43,7 @@
 
             <div class="buttons">
                 <button id="add-task" type="submit"><i class="fa fa-solid fa-plus"></i>&nbsp;ADD</button>
-                <button id="delete-task" type="submit"><i class="fa fa-solid fa-trash"></i>&nbsp;DELETE</button>
+                <button id="delete-task"><i class="fa fa-solid fa-trash"></i>&nbsp;DELETE</button>
             </div>
 
         </form>

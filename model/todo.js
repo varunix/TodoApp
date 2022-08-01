@@ -7,11 +7,11 @@ const todoSchema = new mongoose.Schema({
     },
     category:{
         type: String,
-        required: true
+        enum: ['Personal','Work','School','Cleaning','Other']
     },
     date: {
         type: Date,
-        required: true
+        default: Date.now
     }
 });
 
