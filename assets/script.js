@@ -12,7 +12,6 @@ function listFunction(listVar){
     dropmenuTag.style.display = "none";
 };
 
-$(function(){
-    $("datepicker").datepicker();
-    dateFormat: "dd-mm-yyyy";
+$('#datepicker').datepicker({
+    dateFormat: 'dd/mm/yy'
 });
