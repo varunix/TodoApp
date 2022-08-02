@@ -15,7 +15,7 @@
     <div id="outer-div">
         <h1 id="heading">TODO App</h1>
         
-        <form action="/task-list" method="post" id="todoForm">
+        <form action="/task-list" method="post" id="todoForm" autocomplete="off">
 
             <div id="description">
                 <h4 class="sub-heading">DESCRIPTION</h4>
@@ -48,9 +48,15 @@
 
         </form>
 
-        <div class="task-list">
-            <h3 id="listTextId">This is a task list</h3>
-        </div>
+        <% for(let i of todoList){ %>
+            <div class="task-list">
+                <input type="checkbox">
+                <h3 id="listTextId"><%= i.description %></h3>
+                <p><%= moment(i.date).format('MMMM Do, YYYY') %></p>
+                <button><%= i.category %></button>
+            </div>
+        <% } %>
+        
     </div>
     
 </body>

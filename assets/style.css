@@ -134,3 +134,9 @@
     margin-top: 14px;
     margin-bottom: 14px;
 }
+
+.task-list{
+    border: 2px solid red;
+    display: flex;
+    justify-content:space-between;
+}

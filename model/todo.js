@@ -7,7 +7,8 @@ const todoSchema = new mongoose.Schema({
     },
     category:{
         type: String,
-        enum: ['Personal','Work','School','Cleaning','Other']
+        enum: ['Personal','Work','School','Cleaning','Other'],
+        default: 'Personal'
     },
     date: {
         type: Date,
