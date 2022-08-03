@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const db = require('./config/mongoose.js');
 const Todo = require('./model/todo');
 const moment = require('moment');
@@ -26,7 +27,8 @@ app.get('/', (req, res)=>{
         return res.render('home', {
             title: 'TodoApp',
             todoList: newList,
-            moment: moment
+            moment: moment,
+            portNumber: port
         });
     });
 });
@@ -41,6 +43,18 @@ app.post('/task-list', function(req, res){
 
         return res.redirect('back');
     });
+});
+
+app.get('/delete-task/', function(req, res){
+   let arr = req.query.array.split(",");
+   Todo.deleteMany({_id: {$in: arr}}, function(err){
+        if(err){
+            console.log('error deleting from db '+err);
+        }
+
+        return res.redirect('back');
+   });
+
 });
 
 app.listen(port, function(err){

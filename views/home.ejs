@@ -43,20 +43,22 @@
 
             <div class="buttons">
                 <button id="add-task" type="submit"><i class="fa fa-solid fa-plus"></i>&nbsp;ADD</button>
-                <button id="delete-task"><i class="fa fa-solid fa-trash"></i>&nbsp;DELETE</button>
             </div>
-
+            
         </form>
+        <button id="delete-task" onclick="deleteTask()" value="<%=portNumber%>"><i class="fa fa-solid fa-trash"></i>&nbsp;DELETE</button>
 
         <% for(let i of todoList){ %>
             <div class="task-list">
-                <input type="checkbox">
+                <!-- attached id to every element and passed as parameter in function using this.id -->
+                <input type="checkbox" id="<%= i._id %>" onclick="onCheck(this.id)">
                 <h3 id="listTextId"><%= i.description %></h3>
-                <p><%= moment(i.date).format('MMMM Do, YYYY') %></p>
+                <!-- imported moment to format the data coming from schema -->
+                <p><i class="fa fa-solid fa-calendar"></i>&nbsp;<%= moment(i.date).format('MMMM Do, YYYY') %></p> 
                 <button><%= i.category %></button>
             </div>
         <% } %>
-        
+
     </div>
     
 </body>
