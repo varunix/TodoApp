@@ -1,8 +1,9 @@
 #outer-div{
     width: 650px;
-    border: 2px solid grey;
+    border: 1px solid grey;
     margin: auto;
     margin-top: 50px;
+    border-bottom: 0px;
 }
 
 #heading{
@@ -48,15 +49,16 @@
 
 #dropdown-menu{
     list-style: none;
-    display: none;
+    display: block;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: gray;
-    width: 50%;
+    width: 70%;
     margin-top: 0px;
-    padding-left: 15px;
+    padding-left: 5px;
     margin-left: 15px;
     background-color: rgba(227, 227, 227, 0.694);
     box-shadow: 6px 6px 10px grey;
+    outline: none;
 }
 
 #dropdown-menu p{
@@ -136,21 +138,33 @@
 .task-list{
     border-bottom: 1px solid grey;
     display: flex;
+    height: 80px;
 }
 
 #category-text{
-    border: 1px solid red;
     padding: 15px;
     font-weight: 700;
-    background-color: blue;
+    position: absolute;
+    right: 30%;
+    background-color: gray;
+    margin-top: 11px;
 }
 
 #listTextId{
-    border: 2px solid red;
-    display: inline;
+    font-size: 22px;
+    margin-top: 19px;
+    color: gray;
+    text-transform: capitalize;
+    width: 78%;
+    word-wrap: break-word;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #date-text{
-    margin-top: 55px;
-    justify-content: left;
+    position: absolute;
+    margin-top: 49px;
+    margin-left: 20px;
+    color: gray;
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

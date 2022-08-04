@@ -20,15 +20,14 @@
 
             <div id="description">
                 <h4 class="sub-heading">DESCRIPTION</h4>
-                <input type="text" name="description" placeholder="What do you need to do?" id="descriptionInputId">
+                <input type="text" name="description" maxlength="50" placeholder="What do you need to do?" id="descriptionInputId">
             </div>
     
             <div id="outer-category-div">
                 <div id="category-div">
                     <h4 class="sub-heading">CATEGORY</h4>
-                    <h5 id="dropdown-heading">Choose a category</h5>
-                    <p id="dropdown-icon"><i class="fa fa-solid fa-caret-down"></i></p>
-                    <select id="dropdown-menu" name="category">
+                    <select id="dropdown-menu" name="category" autocomplete="false">
+                        <option selected style="display: none;"></option>
                         <option value="Personal"><p class="dropdown-list" onclick="listFunction('Personal')">Personal</p></option>
                         <option value="Work"><p class="dropdown-list" onclick="listFunction('Work')">Work</p></option>
                         <option value="School"><p class="dropdown-list"  onclick="listFunction('School')">School</p></option>

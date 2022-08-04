@@ -1,12 +1,9 @@
 var categoryTag = document.getElementById("category-div");
 var dropmenuTag = document.getElementById("dropdown-menu");
 var dropdownHeadingTag = document.getElementById("dropdown-heading");
-var flag = false;
 var checkArr = new Array();
 
-dropdownHeadingTag.addEventListener('click', function(){
-    dropmenuTag.style.display = "block";
-});
+//for showing dropdown list on clicking
 
 function listFunction(listVar){
     dropdownHeadingTag.innerHTML = listVar;
@@ -22,6 +19,8 @@ $("#datepicker").click(function(){
 var checkBoxTag = document.getElementById("checkBoxId");
 var taskListTag = document.getElementById("task-list");
 var deleteTag = document.getElementById("delete-task");
+var addTag = document.getElementById("add-task");
+var categoryTextTag = document.getElementById("category-text");
 
 function onCheck(id){
     checkArr.push(id.toString());
@@ -34,3 +33,4 @@ function deleteTask(){
     }
     location.href = "http://localhost:"+deleteTag.value.toString()+"/delete-task?array="+checkArr;
 }
+
