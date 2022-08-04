@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const db = require('./config/mongoose.js');
 const Todo = require('./model/todo');
 const moment = require('moment');
@@ -14,10 +13,6 @@ app.use(express.static('assets'));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res)=>{
-    // res.render('home', {
-    //     title: "Home"
-    // });
-
     Todo.find({}, function(err, newList){
         if(err){
             console.log('Error in fetching the data from the todo list ' + err);
@@ -47,9 +42,9 @@ app.post('/task-list', function(req, res){
 
 app.get('/delete-task/', function(req, res){
    let arr = req.query.array.split(",");
-   Todo.deleteMany({_id: {$in: arr}}, function(err){
+   Todo.deleteMany({_id: {$in: arr}}, function(err){ //using $in operator to delete documents where the values of _id field are.
         if(err){
-            console.log('error deleting from db '+err);
+            console.log('error deleting from db '+ err);
         }
 
         return res.redirect('back');

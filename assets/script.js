@@ -13,8 +13,10 @@ function listFunction(listVar){
     dropmenuTag.style.display = "none";
 };
 
-$('#datepicker').datepicker({
-    dateFormat: 'dd/mm/yy',
+// var date = $('#datepicker').datepicker({"dateFormat": "dd/mm/yy"});
+$("#datepicker").click(function(){
+    var format = moment($("#datepicker").val()).format("DD/MM/YYYY");
+    document.getElementById("#datepicker").innerHTML = format;
 });
 
 var checkBoxTag = document.getElementById("checkBoxId");
@@ -27,5 +29,8 @@ function onCheck(id){
 
 function deleteTask(){
     // var arrStr = (JSON.stringify(checkArr));
+    if(checkArr.length == 0){
+        alert('Please check atleast one item from list to delete!');
+    }
     location.href = "http://localhost:"+deleteTag.value.toString()+"/delete-task?array="+checkArr;
 }

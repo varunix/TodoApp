@@ -100,7 +100,7 @@
     border: none;
     font-size: medium;
     margin-left: 11px;
-    width: 50%;
+    width: 120px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -113,30 +113,44 @@
 }
 
 .buttons{
-    display: flex;
-    justify-content: center;
     border-bottom: 1px solid gray;
+    width: 100%;
 }
 
 #add-task{
     font-size: 20px;
     padding: 20px;
-    background-color: rgb(28, 28, 28);
+    background-color: rgba(28, 28, 28, 0.584);
     margin-top: 14px;
     margin-bottom: 14px;
+    margin-left: 30%;
 }
 
-#delete-task{
-    margin-left: 5px;
+#delete-task{   
     font-size: 20px;
     padding: 20px;
     background-color: rgb(194, 27, 27);
-    margin-top: 14px;
-    margin-bottom: 14px;
+    margin-left: 10px;
 }
 
 .task-list{
-    border: 2px solid red;
+    border-bottom: 1px solid grey;
     display: flex;
-    justify-content:space-between;
+}
+
+#category-text{
+    border: 1px solid red;
+    padding: 15px;
+    font-weight: 700;
+    background-color: blue;
+}
+
+#listTextId{
+    border: 2px solid red;
+    display: inline;
+}
+
+#date-text{
+    margin-top: 55px;
+    justify-content: left;
 }

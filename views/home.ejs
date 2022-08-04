@@ -10,6 +10,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" type="text/css" media="all">
+    <script type = "text/JavaScript" src = " https://MomentJS.com/downloads/moment.js"></script>
 </head>
 <body>
     <div id="outer-div">
@@ -37,16 +38,16 @@
                 </div>
                 <div id="date-div">
                     <h4 class="sub-heading">DUE DATE</h4>
-                    <input type="text" name="date" placeholder="dd/mm/yyyy" id="datepicker">
+                    <input type="date" data-provide="datepicker" name="date" placeholder="dd/mm/yyyy" id="datepicker">
                 </div>
             </div>
 
             <div class="buttons">
                 <button id="add-task" type="submit"><i class="fa fa-solid fa-plus"></i>&nbsp;ADD</button>
+                <button id="delete-task" type="button" onclick="deleteTask()" value="<%=portNumber%>"><i class="fa fa-solid fa-trash"></i>&nbsp;DELETE</button>
             </div>
-            
         </form>
-        <button id="delete-task" onclick="deleteTask()" value="<%=portNumber%>"><i class="fa fa-solid fa-trash"></i>&nbsp;DELETE</button>
+        
 
         <% for(let i of todoList){ %>
             <div class="task-list">
@@ -54,8 +55,8 @@
                 <input type="checkbox" id="<%= i._id %>" onclick="onCheck(this.id)">
                 <h3 id="listTextId"><%= i.description %></h3>
                 <!-- imported moment to format the data coming from schema -->
-                <p><i class="fa fa-solid fa-calendar"></i>&nbsp;<%= moment(i.date).format('MMMM Do, YYYY') %></p> 
-                <button><%= i.category %></button>
+                <p id="date-text"><i class="fa fa-solid fa-calendar"></i>&nbsp;<%= moment(i.date).format("MMM Do, YYYY") %></p> 
+                <p id="category-text"><%= i.category %></p>
             </div>
         <% } %>
 
